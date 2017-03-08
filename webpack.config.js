@@ -13,12 +13,6 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: 'assets'
   },
-  devServer: {
-    inline: true,
-    contentBase: DIST,
-    port: 3000,
-    host:'0.0.0.0'
-  },
   module: {
     loaders: [
       {
