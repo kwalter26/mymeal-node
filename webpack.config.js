@@ -3,7 +3,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 var SRC = path.resolve(__dirname, 'src/index.js');
-var DIST = path.resolve(__dirname, 'dist/');
+var DIST = path.resolve(__dirname, 'public/');
 var ASSETS = path.resolve(DIST, 'assets');
 
 module.exports = {

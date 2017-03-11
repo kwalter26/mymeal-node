@@ -1,45 +1,7 @@
 {
-    "weeklyPlans": [
-        {
-            "startDate": "3-5-2017",
-            "dayPlans": [
-                {
-                    "day": "0",
-                    "meals": [
-                        0
-                    ]
-                },
-                {
-                    "day": "1",
-                    "meals": [
-                        0
-                    ]
-                }
-            ]
-        }
-    ],
-    "allMeals": [
-        {
-            "id": 0,
-            "name": "Meal 1",
-            "recipes": [
-                0,
-                2
-            ]
-        }
-    ],
-    "allRecipes": [
-        {
-            "id": 0,
-            "name": "Recipe 1",
-            "ingredients": [
-                0
-            ]
-        }
-    ],
     "allIngredients": [
         {
-            "id": 0
+            "name": "Ingredient 1"
         }
     ]
 }
