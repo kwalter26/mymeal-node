@@ -4,7 +4,9 @@ import { render } from 'react-dom';
 import storeFactory from './store';
 import sampleData from './initialState.json';
 import { Provider } from 'react-redux';
-import routes from './router'
+import routes from './router';
+
+import { addIngredient } from './actions';
 
 const initialState = (localStorage['redux-store']) ?
   JSON.parse(localStorage['redux-store']) :
@@ -14,6 +16,9 @@ const saveState = () => localStorage['redux-store'] = JSON.stringify(store.getSt
 
 const store = storeFactory(initialState);
 store.subscribe(saveState);
+
+window.store = store;
+window.addIngredient = addIngredient;
 
 render(
   <Provider store={store}>

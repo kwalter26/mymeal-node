@@ -11,3 +11,5 @@ const routes = (
   </Route>
 </Router>
 );
+
+export default routes;

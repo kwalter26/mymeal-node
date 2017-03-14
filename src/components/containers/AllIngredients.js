@@ -6,12 +6,12 @@ const mapStateToProps = state =>({
     ingredients: state.allIngredients
 });
 
-// const mapDispatchToProps = dispatch => ({
-//   onAddIngredient(name) {
-//     dispatch(
-//       addIngredient(name)
-//     );
-//   }
-// });
+const mapDispatchToProps = dispatch => ({
+  onAddIngredient(name) {
+    dispatch(
+      addIngredient(name)
+    );
+  }
+});
 
-export default connect(mapStateToProps)(AllIngredients);
+export default connect(mapStateToProps,mapDispatchToProps)(AllIngredients);
