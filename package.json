@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --exec babel-node server.js",
-    "test": "webpack -wd"
+    "build": "webpack -wd"
   },
   "author": "Kyle Walter",
   "license": "MIT",

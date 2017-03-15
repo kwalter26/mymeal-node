@@ -13,6 +13,7 @@ export const allIngredients = (state = [] , action) => {
   }
 };
 
-export default combineReducers({
-    allIngredients
-})
+export default combineReducers(
+  {
+  allIngredients}
+);
