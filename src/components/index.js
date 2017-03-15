@@ -1,4 +1,6 @@
 import { Component } from 'react';
+import Navigation from './ui/Navigation';
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 export default class App extends Component {
   constructor ({children}) {
@@ -8,6 +10,7 @@ export default class App extends Component {
     const {children} = this.props;
     return (
       <div className='app'>
+        <Navigation/>
         {children}
       </div>
     );
