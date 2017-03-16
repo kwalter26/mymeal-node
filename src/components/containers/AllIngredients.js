@@ -9,7 +9,9 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   onAddIngredient(name) {
-    addIngredient(name);
+    dispatch(
+      addIngredient(name)
+    );
   },
   onSelectIngredient(index) {
     dispatch(

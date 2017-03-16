@@ -9,7 +9,7 @@ const AllIngredients = ({ingredients, ingredientSelected, onAddIngredient=f=>f, 
       <Grid>
         <Row>
           <Col xs={3} sm={3}>
-          <Panel header='Ingredients' footer={<Button bsStyle="primary">Add</Button>}>
+          <Panel header='Ingredients' footer={<Button bsStyle="primary" onClick={()=>onAddIngredient('New Item')}>Add</Button>}>
             <ListGroup fill>
               {ingredients.map((ingredient, i) => {
                  return (
