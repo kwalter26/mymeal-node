@@ -1,9 +1,10 @@
 import C from '../constants';
 
-export const addIngredient = name => ({
+export const addIngredient = (name,background) => ({
   type: C.ADD_INGREDIENT,
   payload: {
-    name: name
+    name: name,
+    background: background
   }
 });
 

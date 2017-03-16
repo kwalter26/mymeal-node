@@ -8,9 +8,9 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onAddIngredient(name) {
+  onAddIngredient(name,background) {
     dispatch(
-      addIngredient(name)
+      addIngredient(name,background)
     );
   },
   onSelectIngredient(index) {
