@@ -1,46 +1,32 @@
 import C from '../../constants';
-import { Component } from 'react';
-import { Table } from 'react-bootstrap';
+import { Table, Row, Col, Grid, Panel, ListGroup, Button } from 'react-bootstrap';
+import Ingredient from './Ingredient';
+import IngredientView from './IngredientView';
 
-class AllIngredients extends Component {
-  constructor ({ingredients, onAddIngredients=f => f }) {
-    super(ingredients,onAddIngredients);
-  }
-  render () {
-    const {ingredients, onAddIngredients} = this.props;
-    return (
-      <div className='all-ingredients'>
-        <h1>All Ingredients</h1>
-        <Table responsive>
-          <thead>
-            <tr>
-              <th>
-                #
-              </th>
-              <th>
-                Name
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {ingredients.map((ingredient, i) => {
-               return (
-                 <tr key={i}>
-                   <td>
-                     {i}
-                   </td>
-                   <td>
-                     {ingredient.name}
-                   </td>
-                 </tr>
-             
-               );
-             })}
-          </tbody>
-        </Table>
-      </div>
-    );
-  }
-}
+const AllIngredients = ({ingredients, ingredientSelected, onAddIngredient=f=>f, onSelectIngredient=f => f }) => {
+  return (
+    <div className='all-ingredients'>
+      <Grid>
+        <Row>
+          <Col xs={3} sm={3}>
+          <Panel header='Ingredients' footer={<Button bsStyle="primary">Add</Button>}>
+            <ListGroup fill>
+              {ingredients.map((ingredient, i) => {
+                 return (
+                   <Ingredient {...ingredient} index={i} key={i} onSelectIngredient={onSelectIngredient} />
+                 );
+               })}
+            </ListGroup>
+          </Panel>
+          </Col>
+          <Col xs={9} sm={9}>
+          <IngredientView {...ingredients[ingredientSelected]}  />
+          </Col>
+        </Row>
+      </Grid>
+    </div>
+  );
+};
+
 
 export default AllIngredients;

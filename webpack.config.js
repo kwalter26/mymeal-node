@@ -4,14 +4,14 @@ var webpack = require('webpack');
 
 var SRC = path.resolve(__dirname, 'src/index.js');
 var DIST = path.resolve(__dirname, 'public/');
-var ASSETS = path.resolve(DIST, 'assets');
+var ASSETS = path.resolve(DIST, 'assets/');
 
 module.exports = {
   entry: SRC,
   output: {
     path: ASSETS,
     filename: 'bundle.js',
-    publicPath: 'assets'
+    publicPath: 'assets/'
   },
   module: {
     loaders: [

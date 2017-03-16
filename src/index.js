@@ -6,7 +6,7 @@ import sampleData from './initialState.json';
 import { Provider } from 'react-redux';
 import routes from './router';
 
-import { addIngredient } from './actions';
+import { addIngredient , selectIngredient} from './actions';
 
 const initialState = (localStorage['redux-store']) ?
   JSON.parse(localStorage['redux-store']) :
@@ -19,6 +19,7 @@ store.subscribe(saveState);
 
 window.store = store;
 window.addIngredient = addIngredient;
+window.selectIngredient = selectIngredient;
 
 render(
   <Provider store={store}>

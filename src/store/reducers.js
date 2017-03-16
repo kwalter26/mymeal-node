@@ -13,7 +13,11 @@ export const allIngredients = (state = [] , action) => {
   }
 };
 
+export const ingredientSelected = (state = null , action) => action.type == C.SELECT_INGREDIENT ?
+  action.payload :
+  state;
+
 export default combineReducers(
   {
-  allIngredients}
+  allIngredients,ingredientSelected}
 );
